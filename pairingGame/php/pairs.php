@@ -1,8 +1,8 @@
 <html>
     <head>
-        <title>INDEX</title>
+        <title>PAIRS</title>
     </head>
     <body>
-        <h1>INDEX PAGE</h1>
+        <h1>PAIRS PAGE</h1>
     </body>
 </html>
