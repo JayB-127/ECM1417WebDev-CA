@@ -1,5 +1,8 @@
+<head>
+    <link rel="stylesheet" href="../css/navbar.css">
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg w-75 mx-auto" id="navbar">
         <div class="container-fluid">
             <div class="justify-content-start">
                 <ul class="navbar-nav">
@@ -17,6 +20,7 @@
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="leaderboard.php" name="leaderboard">Leaderboard</a>
                         </li>
+                        <!-- TODO: show user profile pic -->
                     <?php } else { ?>
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="registration.php" name="register">Register</a>
