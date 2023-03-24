@@ -18,8 +18,12 @@
                     <button type="button" onclick="location.href = 'pairs.php'">Click here to play</button>
                 </div>
             <?php } else { ?>
-                <p id="notRegistered">You're not using a registered session?</p><br>
-                <a href="registration.php">Register now</a>
+                <div id="notRegistered">
+                    <p>You're not using a registered session?</p><br>
+                    <div>
+                        <a href="registration.php">Register now</a>
+                    </div>
+                </div>
             <?php } ?>
         </div>
     </body>

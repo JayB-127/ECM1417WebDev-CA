@@ -39,3 +39,27 @@
 #playBtn button:hover {
     background-color: lightgrey;;
 }
+
+#notRegistered p {
+    padding-top: 100px;
+    margin: 0;
+    font-family: Verdana;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+#notRegistered div {
+    display: flex;
+    justify-content: center;
+}
+
+#notRegistered a {
+    font-size: 18px;
+    margin-left: calc();
+    color: white;
+}
+
+#notRegistered a:hover {
+    font-size: 19px;
+}
