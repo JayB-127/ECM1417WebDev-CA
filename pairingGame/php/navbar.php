@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg w-75 mx-auto" id="navbar">
+    <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container-fluid">
             <div class="justify-content-start">
                 <ul class="navbar-nav">
