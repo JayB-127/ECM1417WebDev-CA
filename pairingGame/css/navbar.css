@@ -4,5 +4,11 @@
 
 #navbar a {
     font-family: Verdana;
+    font-weight: bold;
     font-size: 12px;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    font-style: italic;
 }

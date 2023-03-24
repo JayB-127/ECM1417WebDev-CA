@@ -12,8 +12,12 @@
         <?php include("navbar.php"); ?>
         <div id="main">
             <?php if ($registered) { ?>
-                <h1 id="welcome">Welcome to Pairs</h1>
-                <button type="button">Click here to play</button>
+                <div id="welcome">
+                    <p>Welcome to Pairs</p>
+                </div>
+                <div id="playBtn">
+                    <button type="button">Click here to play</button>
+                </div>
             <?php } else { ?>
                 <p id="notRegistered">You're not using a registered session?</p><br>
                 <a href="registration.php">Register now</a>
