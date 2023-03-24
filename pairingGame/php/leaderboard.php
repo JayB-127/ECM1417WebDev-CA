@@ -2,5 +2,8 @@
     <head>
         <title>LEADERBOARD</title>
     </head>
-    <h1>LEADERBOARD PAGE</h1>
+    <body>
+        <?php include("navbar.php"); ?>
+        <h1>LEADERBOARD PAGE</h1>
+    </body>
 </html>

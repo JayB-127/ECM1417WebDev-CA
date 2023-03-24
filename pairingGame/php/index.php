@@ -3,6 +3,9 @@
         <title>INDEX</title>
     </head>
     <body>
-        <h1>INDEX PAGE</h1>
+        <?php include("navbar.php"); ?>
+        <div id="main">
+            <p>THIS IS THE REST OF THE CONTENT</p>
+        </div>
     </body>
 </html>
