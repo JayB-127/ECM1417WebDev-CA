@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,6 +12,13 @@
         <?php include("navbar.php"); ?>
         <div id="main">
             <p>REGISTRATION PAGE</p>
+            <!-- USER REGISTRATION -->
+            <button type="button" onclick="myFunc()">CLICK ME</button>
+            <script>
+                function myFunct() {
+                    <?php $_SESSION["registered"] = true; ?>
+                }
+            </script>
         </div>
     </body>
 </html>

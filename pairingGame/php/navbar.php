@@ -16,7 +16,7 @@
                     <li class="nav-item" name="memory">
                         <a class="nav-link" href="pairs.php">Play Pairs</a>
                     </li>
-                    <?php if($registered) { ?>
+                    <?php if($_SESSION["registered"] == true) { ?>
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="leaderboard.php" name="leaderboard">Leaderboard</a>
                         </li>
