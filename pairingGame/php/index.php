@@ -7,10 +7,17 @@
         <title>INDEX</title>
     </head>
     <body>
+        <?php $registered = true; ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <?php include("navbar.php"); ?>
         <div id="main">
-            <p>INDEX PAGE</p>
+            <?php if ($registered) { ?>
+                <h1 id="welcome">Welcome to Pairs</h1>
+                <button type="button">Click here to play</button>
+            <?php } else { ?>
+                <p id="notRegistered">You're not using a registered session?</p><br>
+                <a href="registration.php">Register now</a>
+            <?php } ?>
         </div>
     </body>
 </html>
