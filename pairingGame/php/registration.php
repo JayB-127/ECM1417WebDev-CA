@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -16,7 +15,7 @@
             <button type="button" onclick="myFunc()">CLICK ME</button>
             <script>
                 function myFunct() {
-                    <?php $_SESSION["registered"] = true; ?>
+                    <?php $registered = true; ?>
                 }
             </script>
         </div>
