@@ -89,11 +89,8 @@
                         <img class="secondaryImg" src="../assets/eyes/normal.png">
                         <img class="secondaryImg" src="../assets/mouth/open.png">
                     </div>
+                    <!-- on selection of radio elements, replace img with chosen avatar part -->
                     <hr>
-                    <!-- thoughts:
-                        - create container div for avatar (id="avatar")
-                        - when radio selected for skin, replace current skin img in container with newly selected img, giving it position: relative
-                        - do the same for eyes and mouth components but with position: absolute
                 </form>
             </div>
         </div>
