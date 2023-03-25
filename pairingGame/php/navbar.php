@@ -1,3 +1,5 @@
+<?php session_start() ?>
+<!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="../css/navbar.css">
 </head>
@@ -16,7 +18,7 @@
                     <li class="nav-item" name="memory">
                         <a class="nav-link" href="pairs.php">Play Pairs</a>
                     </li>
-                    <?php if($registered === true) { ?>
+                    <?php if($_SESSION["registered"] === true) { ?>
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="leaderboard.php" name="leaderboard">Leaderboard</a>
                         </li>

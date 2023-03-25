@@ -1,3 +1,5 @@
+<?php session_start() ?>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,8 +16,9 @@
             <!-- USER REGISTRATION -->
             <button type="button" onclick="myFunc()">CLICK ME</button>
             <script>
-                function myFunct() {
-                    <?php $registered = true; ?>
+                function myFunc() {
+                    <?php $_SESSION["registered"] = true; ?>
+                    window.location.href = "index.php";
                 }
             </script>
         </div>
