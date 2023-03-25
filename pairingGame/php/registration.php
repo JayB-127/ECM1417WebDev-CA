@@ -13,14 +13,30 @@
         <?php include("navbar.php"); ?>
         <div id="main">
             <p>REGISTRATION PAGE</p>
-            <!-- USER REGISTRATION -->
-            <button type="button" onclick="myFunc()">CLICK ME</button>
-            <script>
-                function myFunc() {
-                    <?php $_SESSION["registered"] = true; ?>
-                    window.location.href = "index.php";
-                }
-            </script>
+            <form action="">
+                <label for="username">Username:</label><br>
+                <input type="text" name="username"><br>
+
+                <label>Avatar Selection:</label><br>
+                
+                <label class="avatar">
+                    <input class="avatarRadio" type="radio" name="avatar-skin">
+                    <img src="../assets/skin/green.png" alt="skin-green">                   
+                </label>
+                <label class="avatar">
+                    <input class="avatarRadio" type="radio" name="avatar-skin">
+                    <img src="../assets/skin/red.png" alt="skin-red">
+                </label>
+                <label class="avatar">
+                    <input class="avatarRadio" type="radio" name="avatar-skin">
+                    <img src="../assets/skin/yellow.png" alt="skin-yellow">
+                </label>
+                <br>
+                <label>
+                    <input class="avatarRadio" type="radio">
+                </label>
+
+            </form>
         </div>
     </body>
 </html>
