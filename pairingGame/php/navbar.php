@@ -18,7 +18,7 @@
                     <li class="nav-item" name="memory">
                         <a class="nav-link" href="pairs.php">Play Pairs</a>
                     </li>
-                    <?php if($_SESSION["registered"] === true) { ?>
+                    <?php if(isset($_SESSION["registered"]) === true) { ?>
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="leaderboard.php" name="leaderboard">Leaderboard</a>
                         </li>
