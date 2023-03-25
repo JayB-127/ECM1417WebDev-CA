@@ -18,16 +18,26 @@
                     <li class="nav-item" name="memory">
                         <a class="nav-link" href="pairs.php">Play Pairs</a>
                     </li>
-                    <?php if(isset($_SESSION["registered"]) === true) { ?>
+                    <?php
+                    if (isset($_SESSION["registered"])) {
+                        if ($_SESSION["registered"] === true) {
+                    ?>
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="leaderboard.php" name="leaderboard">Leaderboard</a>
                         </li>
                         <!-- TODO: show user profile pic -->
-                    <?php } else { ?>
+                    <?php
+                        } else if ($_SESSION["registered"] === false) {
+                    ?>
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="registration.php" name="register">Register</a>
                         </li>
-                    <?php } ?>
+                    <?php
+                        }
+                    } else {
+                        $_SESSION["registered"] = false;
+                    }
+                    ?>
                 </ul>
             </div>
         </div>

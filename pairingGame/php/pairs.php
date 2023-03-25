@@ -13,13 +13,6 @@
         <?php include("navbar.php"); ?>
         <div id="main">
             <p>PAIRS PAGE</p>
-            <button type="button" onclick="unsetSessions()">UNSET SESSION VARIABLES</button>
-            <script>
-                function unsetSessions() {
-                    <?php session_unset() ?>
-                    window.location.href = "index.php";
-                } 
-            </script>
         </div>
     </body>
 </html>
