@@ -19,70 +19,81 @@
                     <hr>
                     <label>Avatar Selection:</label><br><br>
                     <!-- avatar skin -->
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-skin">
                         <img src="../assets/skin/green.png" alt="skin-green">                   
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-skin">
                         <img src="../assets/skin/red.png" alt="skin-red">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-skin">
                         <img src="../assets/skin/yellow.png" alt="skin-yellow">
                     </label>
                     <hr>
                     <!-- avatar eyes -->
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-eyes">
                         <img src="../assets/eyes/closed.png" alt="eyes-closed">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-eyes">
                         <img src="../assets/eyes/laughing.png" alt="eyes-laughing">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-eyes">
                         <img src="../assets/eyes/long.png" alt="eyes-long">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-eyes">
                         <img src="../assets/eyes/normal.png" alt="eyes-normal">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-eyes">
                         <img src="../assets/eyes/rolling.png" alt="eyes-rolling">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-eyes">
                         <img src="../assets/eyes/winking.png" alt="eyes-winking">
                     </label>
                     <hr>
                     <!-- avatar mouth -->
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-mouth">
                         <img src="../assets/mouth/open.png" alt="mouth-open">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-mouth">
                         <img src="../assets/mouth/sad.png" alt="mouth-sad">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-mouth">
                         <img src="../assets/mouth/smiling.png" alt="mouth-smiling">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-mouth">
                         <img src="../assets/mouth/straight.png" alt="mouth-straight">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-mouth">
                         <img src="../assets/mouth/surprise.png" alt="mouth-surprise">
                     </label>
-                    <label class="avatar">
+                    <label class="avatarPart">
                         <input type="radio" name="avatar-mouth">
                         <img src="../assets/mouth/teeth.png" alt="mouth-teeth">
                     </label>
+                    <hr>
+                    <div id="avatar">
+                        <img class="primaryImg" src="../assets/skin/red.png">
+                        <img class="secondaryImg" src="../assets/eyes/normal.png">
+                        <img class="secondaryImg" src="../assets/mouth/open.png">
+                    </div>
+                    <hr>
+                    <!-- thoughts:
+                        - create container div for avatar (id="avatar")
+                        - when radio selected for skin, replace current skin img in container with newly selected img, giving it position: relative
+                        - do the same for eyes and mouth components but with position: absolute
                 </form>
             </div>
         </div>

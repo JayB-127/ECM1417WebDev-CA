@@ -83,23 +83,45 @@ html, body {
 
 }
 
-.avatar img {
+.avatarPart img {
     padding: 4px;
     width: 50px;
     height: 50px;
     outline: 2px black solid;
 }
 
-.avatar input {
+.avatarPart input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.avatar input + img {
+.avatarPart input + img {
     cursor: pointer;
 }
 
-.avatar input:checked + img {
+.avatarPart input:checked + img {
     outline: 2px blue solid;
+}
+
+#avatar {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#avatar .primaryImg {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+}
+
+#avatar .secondaryImg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
 }
