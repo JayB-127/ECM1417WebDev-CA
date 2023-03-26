@@ -74,6 +74,14 @@ html, body {
     display: inline-block;
     margin-top: 100px;
     margin-left: calc(50% - 189px);
+    border: 3px black solid;
+    border-radius: 15px;
+}
+
+#form p {
+    padding-top: 10px;
+    font-size: 25px;
+    text-align: center;
 }
 
 #form form {
@@ -102,6 +110,10 @@ html, body {
 
 .avatarPart input:checked + img {
     outline: 2px blue solid;
+}
+
+.avatarhr {
+    opacity: 0;
 }
 
 #avatar {

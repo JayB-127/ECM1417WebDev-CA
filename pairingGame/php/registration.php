@@ -13,7 +13,9 @@
         <?php include("navbar.php"); ?>
         <div id="main">
             <div id="form">
+                <p>Registration</p>
                 <form action="">
+                    <hr>
                     <label for="username">Username:</label><br>
                     <input type="text" name="username"><br>
                     <hr>
@@ -31,7 +33,7 @@
                         <input type="radio" name="avatar-skin">
                         <img src="../assets/skin/yellow.png" alt="skin-yellow">
                     </label>
-                    <hr>
+                    <hr class="avatarhr">
                     <!-- avatar eyes -->
                     <label class="avatarPart">
                         <input type="radio" name="avatar-eyes">
@@ -57,7 +59,7 @@
                         <input type="radio" name="avatar-eyes">
                         <img src="../assets/eyes/winking.png" alt="eyes-winking">
                     </label>
-                    <hr>
+                    <hr class="avatarhr">
                     <!-- avatar mouth -->
                     <label class="avatarPart">
                         <input type="radio" name="avatar-mouth">
@@ -83,7 +85,7 @@
                         <input type="radio" name="avatar-mouth">
                         <img src="../assets/mouth/teeth.png" alt="mouth-teeth">
                     </label>
-                    <hr>
+                    <hr class="avatarhr">
                     <div id="avatar">
                         <img class="primaryImg" src="../assets/skin/red.png">
                         <img class="secondaryImg" src="../assets/eyes/normal.png">
