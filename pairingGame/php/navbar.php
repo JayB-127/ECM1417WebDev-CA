@@ -25,22 +25,29 @@
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="leaderboard.php" name="leaderboard">Leaderboard</a>
                         </li>
-                        <!-- TODO: show user avatar, get from cookies -->
+                        <li id="avatarNav" class="nav-item" name="avatar">
+                            <img class="primaryImg" src="<?php echo $_COOKIE["skin"] ?>">
+                            <img class="secondaryImg" src="<?php echo $_COOKIE["eyes"] ?>">
+                            <img class="secondaryImg" src="<?php echo $_COOKIE["mouth"] ?>">
+                        </li>
                         <li class="nav-item" name="avatar">
                             <img src="">
                         </li>
                     <?php
                         } else if ($_SESSION["registered"] === false) {
                     ?>
-                        <li class="nav-item" name="leaderboard">
+                        <li class="nav-item" name="registration">
                             <a class="nav-link" href="registration.php" name="register">Register</a>
                         </li>
                     <?php
                         }
                     } else {
                         $_SESSION["registered"] = false;
-                    }
                     ?>
+                    <li class="nav-item" name="registration">
+                        <a class="nav-link" href="registration.php" name="register">Register</a>
+                    </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
