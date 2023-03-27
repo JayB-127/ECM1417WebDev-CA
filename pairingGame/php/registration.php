@@ -26,8 +26,9 @@
                     setcookie("eyes", $_POST["avatar-eyes"]);
                     setcookie("mouth", $_POST["avatar-mouth"]);
                     $_SESSION["registered"] = true;
+                    echo "<script>location.href='index.php';</script>";
+                    exit;
                 }
-                //store username and avatar in cookies
                 //direct to index.php
             }
             ?>
