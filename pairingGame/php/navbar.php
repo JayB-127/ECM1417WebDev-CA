@@ -25,7 +25,10 @@
                         <li class="nav-item" name="leaderboard">
                             <a class="nav-link" href="leaderboard.php" name="leaderboard">Leaderboard</a>
                         </li>
-                        <!-- TODO: show user profile pic -->
+                        <!-- TODO: show user avatar, get from cookies -->
+                        <li class="nav-item" name="avatar">
+                            <img src="">
+                        </li>
                     <?php
                         } else if ($_SESSION["registered"] === false) {
                     ?>

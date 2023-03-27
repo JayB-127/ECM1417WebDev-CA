@@ -91,6 +91,12 @@ html, body {
 
 }
 
+#invalidMsg {
+    color: red;
+    font-size: 13px;
+    padding-left: 2px;
+}
+
 .avatarPart img {
     padding: 4px;
     width: 50px;

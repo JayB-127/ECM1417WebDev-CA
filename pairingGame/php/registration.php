@@ -13,12 +13,26 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <?php include("navbar.php"); ?>
         <div id="main">
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $username = $invalidMsg = "";
+                if (empty($_POST["username"])) {
+                    $invalidMsg = "*username cannot be empty";
+                } else if (preg_match("/[\"!@#%&^*()+=\]\}\{\['<>?\/]/", $_POST["username"]) == true) {
+                    $invalidMsg = "*username cannot contain: \"!@#%&^*()+={}-;:]['<>?/";
+                } else {
+                    $username = $_POST["username"];
+                }
+                //store username and avatar in cookies
+            }
+            ?>
             <div id="form">
                 <p>Registration</p>
-                <form action="">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                     <hr>
                     <label for="username">Username:</label><br>
-                    <input type="text" name="username"><br>
+                    <input type="text" name="username" placeholder="Type username here..."><br>
+                    <span id="invalidMsg"><?php echo $invalidMsg ?></span>
                     <hr>
                     <label>Avatar Selection:</label><br><br>
                     <!-- avatar skin -->
