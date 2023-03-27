@@ -30,9 +30,6 @@
                             <img class="secondaryImg" src="<?php echo $_COOKIE["eyes"] ?>">
                             <img class="secondaryImg" src="<?php echo $_COOKIE["mouth"] ?>">
                         </li>
-                        <li class="nav-item" name="avatar">
-                            <img src="">
-                        </li>
                     <?php
                         } else if ($_SESSION["registered"] === false) {
                     ?>
