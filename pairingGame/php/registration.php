@@ -24,6 +24,7 @@
                     $username = $_POST["username"];
                 }
                 //store username and avatar in cookies
+                //direct to index.php
             }
             ?>
             <div id="form">
