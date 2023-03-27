@@ -27,7 +27,7 @@
                     setcookie("mouth", $_POST["avatar-mouth"]);
                     $_SESSION["registered"] = true;
                     echo "<script>location.href='index.php';</script>";
-                    exit;
+                    exit();
                 }
                 //direct to index.php
             }
