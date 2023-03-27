@@ -29,7 +29,6 @@
                     echo "<script>location.href='index.php';</script>";
                     exit();
                 }
-                //direct to index.php
             }
             ?>
             <div id="form">
