@@ -93,6 +93,7 @@
                     </div>
                     <!-- on selection of radio elements, replace img with chosen avatar part -->
                     <hr>
+                    <input type="submit" value="Register">
                 </form>
             </div>
         </div>
