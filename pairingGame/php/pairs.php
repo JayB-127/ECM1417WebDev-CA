@@ -13,7 +13,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <?php include("navbar.php"); ?>
         <div id="main">
-            <button id="startgame" type="button" onclick="showGame()">Start Game...</button>
+            <div id="startgame">
+                <button type="button" onclick="showGame()">Start Game...</button>
+            </div>
             <div id="game" style="display: none;">
                 <h1>THIS IS THE GAME</h1>
             </div>

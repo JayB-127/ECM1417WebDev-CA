@@ -10,3 +10,25 @@ html, body {
     background-size: cover;
     background-position: center;
 }
+
+#startgame {
+    display: flex;
+    justify-content: center;
+    padding-top: 400px;
+}
+
+#startgame button {
+    font-size: 30px;
+    width: 300px;
+    height: 75px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#game {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    box-shadow: 5px;
+}
