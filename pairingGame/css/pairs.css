@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#main {
+    background-image: url("../assets/bg/backgroundImg.jpg");
+    width: auto;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}

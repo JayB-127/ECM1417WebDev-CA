@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#main {
+    background-image: url("../assets/bg/backgroundImg.jpg");
+    width: auto;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#welcome {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome p {
+    font-family: Verdana;
+    font-size: 75px;
+    font-weight: bold;
+    color: darkorange;
+    margin: 0;
+}
+
+#playBtn {
+    display: flex;
+    justify-content: center;
+}
+
+#playBtn button {
+    font-size: 30px;
+    width: 300px;
+    height: 75px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#playBtn button:hover {
+    background-color: lightgrey;;
+}
+
+#notRegistered p {
+    padding-top: 100px;
+    margin: 0;
+    font-family: Verdana;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+#notRegistered div {
+    display: flex;
+    justify-content: center;
+}
+
+#notRegistered a {
+    font-size: 18px;
+    margin-left: calc();
+    color: white;
+}
+
+#notRegistered a:hover {
+    font-size: 19px;
+}

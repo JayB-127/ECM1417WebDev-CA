@@ -12,3 +12,25 @@
     text-decoration: underline;
     font-style: italic;
 }
+
+#avatarNav {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#avatarNav .primaryImg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+}
+
+#avatarNav .secondaryImg {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+}

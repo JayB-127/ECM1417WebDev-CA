@@ -11,64 +11,6 @@ html, body {
     background-position: center;
 }
 
-#welcome {
-    display: flex;
-    width: 100%;
-    height: 400px;
-    align-items: center;
-    justify-content: center;
-}
-
-#welcome p {
-    font-family: Verdana;
-    font-size: 75px;
-    font-weight: bold;
-    color: darkorange;
-    margin: 0;
-}
-
-#playBtn {
-    display: flex;
-    justify-content: center;
-}
-
-#playBtn button {
-    font-size: 30px;
-    width: 300px;
-    height: 75px;
-    text-align: center;
-    border-radius: 20px;
-    background-color: white;
-}
-
-#playBtn button:hover {
-    background-color: lightgrey;;
-}
-
-#notRegistered p {
-    padding-top: 100px;
-    margin: 0;
-    font-family: Verdana;
-    font-size: 30px;
-    text-align: center;
-    color: white;
-}
-
-#notRegistered div {
-    display: flex;
-    justify-content: center;
-}
-
-#notRegistered a {
-    font-size: 18px;
-    margin-left: calc();
-    color: white;
-}
-
-#notRegistered a:hover {
-    font-size: 19px;
-}
-
 #form {
     background-color: #b0b0b0;
     display: inline-block;
@@ -140,28 +82,6 @@ html, body {
     position: absolute;
     width: 50px;
     height: 50px;
-    top: 0;
-    left: 0;
-}
-
-#avatarNav {
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-#avatarNav .primaryImg {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    top: 0;
-    left: 0;
-}
-
-#avatarNav .secondaryImg {
-    position: absolute;
-    width: 30px;
-    height: 30px;
     top: 0;
     left: 0;
 }
