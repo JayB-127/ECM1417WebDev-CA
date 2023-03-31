@@ -7,6 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/pairs.css">
         <script type="text/javascript" src="../js/startgame.js"></script>
+        <script type="text/javascript" src="../js/pairs.js"></script>
         <title>PAIRS</title>
     </head>
     <body>
@@ -16,8 +17,87 @@
             <div id="startgame">
                 <button type="button" onclick="showGame()">Start Game...</button>
             </div>
-            <div id="game" style="display: none;">
-                <h1>THIS IS THE GAME</h1>
+            <div id="game">
+                <div id="" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 1 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 1 BACK</h1>
+                    </div>
+                </div>
+                <div id="1" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 2 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 2 BACK</h1>
+                    </div>
+                </div>
+                <div id="2" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 3 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 3 BACK</h1>
+                    </div>
+                </div>
+                <div id="3" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 4 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 4 BACK</h1>
+                    </div>
+                </div>
+                <div id="4" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 5 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 5 BACK</h1>
+                    </div>
+                </div>
+                <div id="5" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 6 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 6 BACK</h1>
+                    </div>
+                </div>
+                <div id="6" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 7 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 7 BACK</h1>
+                    </div>
+                </div>
+                <div id="7" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 8 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 8 BACK</h1>
+                    </div>
+                </div>
+                <div id="8" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 9 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 9 BACK</h1>
+                    </div>
+                </div>
+                <div id="9" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <h1>CARD 10 FRONT</h1>
+                    </div>
+                    <div class="cardBack">
+                        <h1>CARD 10 BACK</h1>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
