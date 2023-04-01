@@ -66,6 +66,12 @@ html, body {
     transform: rotateY(-180deg);
 }
 
+.questionMark {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+}
+
 .avatar {
     position: relative;
     top: calc(50% - 50px);

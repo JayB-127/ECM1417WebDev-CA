@@ -4,6 +4,7 @@ function showGame() {
     var game = document.getElementById("game");
     button.style.display = "none";
     game.style.display = "inline-grid";
+    createAvatars();
 }
 
 function createAvatars() {
