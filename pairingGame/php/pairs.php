@@ -23,7 +23,11 @@
                         <h1>CARD 1 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 1 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="1" class="card" onclick="flip(this)">
@@ -31,7 +35,11 @@
                         <h1>CARD 2 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 2 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="2" class="card" onclick="flip(this)">
@@ -39,7 +47,11 @@
                         <h1>CARD 3 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 3 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="3" class="card" onclick="flip(this)">
@@ -47,7 +59,11 @@
                         <h1>CARD 4 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 4 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="4" class="card" onclick="flip(this)">
@@ -55,7 +71,11 @@
                         <h1>CARD 5 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 5 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="5" class="card" onclick="flip(this)">
@@ -63,7 +83,11 @@
                         <h1>CARD 6 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 6 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="6" class="card" onclick="flip(this)">
@@ -71,7 +95,11 @@
                         <h1>CARD 7 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 7 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="7" class="card" onclick="flip(this)">
@@ -79,7 +107,11 @@
                         <h1>CARD 8 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 8 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="8" class="card" onclick="flip(this)">
@@ -87,7 +119,11 @@
                         <h1>CARD 9 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 9 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
                 <div id="9" class="card" onclick="flip(this)">
@@ -95,7 +131,11 @@
                         <h1>CARD 10 FRONT</h1>
                     </div>
                     <div class="cardBack">
-                        <h1>CARD 10 BACK</h1>
+                        <div class="avatar">
+                            <img class="primaryImg" src="../assets/skin/green.png">
+                            <img class="secondaryImg" src="../assets/eyes/closed.png">
+                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                        </div>
                     </div>
                 </div>
             </div>
