@@ -24,9 +24,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/">
-                            <img class="secondaryImg" src="">
-                            <img class="secondaryImg" src="">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -36,9 +36,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -48,9 +48,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -60,9 +60,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -72,9 +72,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -84,9 +84,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -96,9 +96,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -108,9 +108,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -120,9 +120,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>
@@ -132,9 +132,9 @@
                     </div>
                     <div class="cardBack">
                         <div class="avatar">
-                            <img class="primaryImg" src="../assets/skin/green.png">
-                            <img class="secondaryImg" src="../assets/eyes/closed.png">
-                            <img class="secondaryImg" src="../assets/mouth/open.png">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
                         </div>
                     </div>
                 </div>

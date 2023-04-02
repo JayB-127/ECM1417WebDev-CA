@@ -1,7 +1,7 @@
 
 function showGame() {
-    var button = document.getElementById("startgame");
-    var game = document.getElementById("game");
+    let button = document.getElementById("startgame");
+    let game = document.getElementById("game");
     button.style.display = "none";
     game.style.display = "inline-grid";
     createAvatars();
@@ -11,7 +11,7 @@ function createAvatars() {
     var cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //array of cards that do not have an avatar
     
     for (var i = 0; i < 5; i++) {
-        var features = randomFeatures(); //random features for this pair of cards
+        let features = randomFeatures(); //random features for this pair of cards
         let card1Index = Math.floor(Math.random() * cards.length);
         let card1 = cards[card1Index];
         cards.splice(card1Index, 1); //removes card from array of available cards
@@ -28,18 +28,18 @@ function randomFeatures() {
     const eyes = ["closed", "laughing", "long", "normal", "rolling", "winking"];
     const mouth = ["open", "sad", "smiling", "straight", "surprise", "teeth"];
 
-    var skinChoice = Math.floor(Math.random() * skin.length);
-    var eyesChoice = Math.floor(Math.random() * eyes.length);
-    var mouthChoice = Math.floor(Math.random() * mouth.length);
+    let skinChoice = Math.floor(Math.random() * skin.length);
+    let eyesChoice = Math.floor(Math.random() * eyes.length);
+    let mouthChoice = Math.floor(Math.random() * mouth.length);
     return [skin[skinChoice], eyes[eyesChoice], mouth[mouthChoice]];
 }
 
 function assignFeatures(cardId, features) {
-    var card = document.getElementById(cardId);
+    let card = document.getElementById(cardId);
     
-    var skin = features[0];
-    var eyes = features[1];
-    var mouth = features[2];
+    let skin = features[0];
+    let eyes = features[1];
+    let mouth = features[2];
 
     card.children[1].children[0].children[0].src = "../assets/skin/".concat(skin, ".png");
     card.children[1].children[0].children[1].src = "../assets/eyes/".concat(eyes, ".png");
