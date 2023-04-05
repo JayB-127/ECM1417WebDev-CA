@@ -22,7 +22,6 @@ function flip(elem) {
 
         //for the last two cards that were flipped
         for (var i = 0; i < flippedCards.length; i++) {
-            alert(flippedCards[i]);
             let card = document.getElementById(flippedCards[i])
             skin.push(card.children[1].children[0].children[0].src.split("/").pop()); //takes string after last "/" in src
             eyes.push(card.children[1].children[0].children[1].src.split("/").pop());
