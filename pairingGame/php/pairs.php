@@ -17,7 +17,7 @@
             <div id="startgame">
                 <button type="button" onclick="showGame()">Start Game...</button>
             </div>
-            <div id="game">
+            <div id="game" style="display:none">
                 <div id="1" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
@@ -138,6 +138,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="aftergame" style="display:none">
+                <p>You won with a score of: </p>
+                <p style="color: red">[score]</p>
+                <hr>
+                <form action="" method="post"> <!-- add <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> as action -->
+                    <button type="button" onclick="restartGame()">Play again</button>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </body>

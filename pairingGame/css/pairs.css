@@ -26,8 +26,34 @@ html, body {
     background-color: white;
 }
 
+#aftergame {
+    background-color: #b0b0b0;
+    margin-top: 100px;
+    margin-left: calc(50% - 225px);
+    width: 450px;
+    height: auto;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#aftergame p {
+    padding-top: 20px;
+    font-size: 35px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#aftergame button {
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
 #game {
-    display: none;
     grid-template-columns: auto auto auto auto auto;
     background-color: grey;
     box-shadow: 5px 5px white;

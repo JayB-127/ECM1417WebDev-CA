@@ -27,7 +27,12 @@ function flip(elem) {
             }
             totalFlipped += 2;
             if (totalFlipped == 10) {
-                //game won
+                setTimeout(function() {
+                    let aftergame = document.getElementById("aftergame");
+                    let game = document.getElementById("game");
+                    aftergame.style.display = "block";
+                    game.style.display = "none";
+                }, 500);
             }
         } else {
             setTimeout(function() {
