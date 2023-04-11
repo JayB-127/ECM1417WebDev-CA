@@ -30,7 +30,7 @@ function flip(elem) {
                 setTimeout(function() {
                     let aftergame = document.getElementById("aftergame");
                     let game = document.getElementById("game");
-                    aftergame.style.display = "block";
+                    aftergame.style.display = "inline-block";
                     game.style.display = "none";
                 }, 500);
             }
