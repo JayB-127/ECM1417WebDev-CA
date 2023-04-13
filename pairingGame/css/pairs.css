@@ -27,21 +27,33 @@ html, body {
 }
 
 #aftergame {
-    background-color: #b0b0b0;
-    margin-top: 200px;
-    margin-left: calc(50% - 225px);
     width: 450px;
     height: auto;
-    text-align: center;
+    margin-top: 200px;
+    margin-left: calc(50% - 225px);
+    background-color: #b0b0b0;
     border: 3px solid black;
     border-radius: 15px;
+    text-align: center;
 }
 
 #aftergame p {
-    padding-top: 20px;
+    margin: 0;
+    padding: 20px 0 10px 0;
     font-size: 35px;
+}
+
+#aftergame textarea {
+    width: 80px;
+    height: 80px;
     margin: 0px;
     padding: 0px;
+    background: transparent;
+    border: none;
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    resize: none;
 }
 
 #aftergame button {
