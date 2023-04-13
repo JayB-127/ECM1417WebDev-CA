@@ -6,8 +6,8 @@ const MAX_ATTEMPTS = 30;
 const TIME_LIMIT = 30000;
 
 var attempts = 0;
-var timeTaken = 0;
 var startTime = 0;
+var points = 0;
 
 function flip(elem) {
     if (flipped == 0) {
@@ -34,7 +34,7 @@ function flip(elem) {
             totalFlipped += 2;
             if (totalFlipped == 10) { //TODO: change back to 10 after testing
                 let date = new Date();
-                timeTaken = (date.getTime() - startTime);
+                var timeTaken = (date.getTime() - startTime);
                 calcPoints(timeTaken, attempts);
                 setTimeout(function() {
                     let aftergame = document.getElementById("aftergame");
@@ -84,7 +84,15 @@ function setStartTime() {
 }
 
 function calcPoints(time, attempts) {
-    var points = Math.floor(100 - (time/TIME_LIMIT) * (attempts/MAX_ATTEMPTS) * 100); //formula for calculating points
+    points = Math.floor(100 - (time/TIME_LIMIT) * (attempts/MAX_ATTEMPTS) * 100); //formula for calculating points
     let displayPoints = document.getElementById("score");
     displayPoints.innerText = points;
+}
+
+function restartGame() {
+    location.reload();
+}
+
+function submitScore() {
+    //write points to file
 }

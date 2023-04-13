@@ -1,6 +1,5 @@
 
 function showGame() {
-    //TODO: set score to 0
     let startgame = document.getElementById("startgame");
     let game = document.getElementById("game");
     startgame.style.display = "none";
@@ -45,9 +44,4 @@ function assignFeatures(cardId, features) {
     card.children[1].children[0].children[0].src = "../assets/skin/".concat(skin, ".png");
     card.children[1].children[0].children[1].src = "../assets/eyes/".concat(eyes, ".png");
     card.children[1].children[0].children[2].src = "../assets/mouth/".concat(mouth, ".png");
-}
-
-function restartGame() {
-    //set score to 0
-    location.reload();
 }

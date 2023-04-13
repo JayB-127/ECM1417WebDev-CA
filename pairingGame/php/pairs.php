@@ -141,12 +141,10 @@
             </div>
             <div id="aftergame" style="display:none">
                 <p>You won with a score of: </p>
-                <p style="color: red" id="score">[score]</p>
+                <p style="color: red" id="score"></p>
                 <hr>
-                <form action="" method="post"> <!-- add <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> as action -->
-                    <button type="button" onclick="restartGame()">Play again</button>
-                    <button type="submit">Submit</button>
-                </form>
+                <button type="button" onclick="restartGame()">Play again</button>
+                <button type="button" onclick="submitScore()">Submit</button>
             </div>
         </div>
     </body>
