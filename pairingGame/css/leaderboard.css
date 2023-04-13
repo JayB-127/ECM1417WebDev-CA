@@ -12,14 +12,27 @@ html, body {
 }
 
 #leaderboard {
+    display: inline-block;
+    margin: 200px calc(50% - 250px);
     background-color: grey;
     box-shadow: 5px 5px white;
 }
 
 #leaderboard table {
     border-spacing: 2px;
+    text-align: center;
 }
 
 #leaderboard th {
+    padding: 5px 50px;
     background-color: blue;
+    color: white;
+    border: 3px solid black;
+    font-size: 30px;
+}
+
+#leaderboard td {
+    width: 250px;
+    border: 3px solid black;
+    font-size: 25px;
 }
