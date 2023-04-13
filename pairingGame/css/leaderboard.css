@@ -10,3 +10,16 @@ html, body {
     background-size: cover;
     background-position: center;
 }
+
+#leaderboard {
+    background-color: grey;
+    box-shadow: 5px 5px white;
+}
+
+#leaderboard table {
+    border-spacing: 2px;
+}
+
+#leaderboard th {
+    background-color: blue;
+}
