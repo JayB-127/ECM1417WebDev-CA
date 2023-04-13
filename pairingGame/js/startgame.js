@@ -25,14 +25,14 @@ function createAvatars() {
 }
 
 function randomFeatures() {
-    const skin = ["green", "red", "yellow"];
-    const eyes = ["closed", "laughing", "long", "normal", "rolling", "winking"];
-    const mouth = ["open", "sad", "smiling", "straight", "surprise", "teeth"];
+    const SKIN = ["green", "red", "yellow"];
+    const EYES = ["closed", "laughing", "long", "normal", "rolling", "winking"];
+    const MOUTH = ["open", "sad", "smiling", "straight", "surprise", "teeth"];
 
-    let skinChoice = Math.floor(Math.random() * skin.length);
-    let eyesChoice = Math.floor(Math.random() * eyes.length);
-    let mouthChoice = Math.floor(Math.random() * mouth.length);
-    return [skin[skinChoice], eyes[eyesChoice], mouth[mouthChoice]];
+    let skinChoice = Math.floor(Math.random() * SKIN.length);
+    let eyesChoice = Math.floor(Math.random() * EYES.length);
+    let mouthChoice = Math.floor(Math.random() * MOUTH.length);
+    return [SKIN[skinChoice], EYES[eyesChoice], MOUTH[mouthChoice]];
 }
 
 function assignFeatures(cardId, features) {

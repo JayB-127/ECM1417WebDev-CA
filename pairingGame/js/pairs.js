@@ -2,13 +2,19 @@ var flipped = 0;
 var totalFlipped = 0;
 var flippedCards = [];
 
+const MAX_ATTEMPTS = 30;
+const TIME_LIMIT = 30000;
+
+var attempts = 0;
+var timeTaken = 0;
+var startTime = 0;
+
 function flip(elem) {
     if (flipped == 0) {
         flippedCards.push(elem.id);
         elem.style.transform = "rotateY(-180deg)";
         elem.style.pointerEvents = "none";
         flipped += 1;
-
     } else if (flipped == 1) {
         flippedCards.push(elem.id);
         const cards = document.getElementsByClassName("card");
@@ -26,7 +32,10 @@ function flip(elem) {
                 }
             }
             totalFlipped += 2;
-            if (totalFlipped == 10) {
+            if (totalFlipped == 10) { //TODO: change back to 10 after testing
+                let date = new Date();
+                timeTaken = (date.getTime() - startTime);
+                calcPoints(timeTaken, attempts);
                 setTimeout(function() {
                     let aftergame = document.getElementById("aftergame");
                     let game = document.getElementById("game");
@@ -44,6 +53,7 @@ function flip(elem) {
             totalFlipped = 0;
         }
 
+        attempts += 1;
         flipped = 0;
         flippedCards = [];
     }
@@ -66,4 +76,15 @@ function compareAvatars(flippedCards) {
         return true;
     }
     return false;
+}
+
+function setStartTime() {
+    let date = new Date();
+    startTime = date.getTime();   
+}
+
+function calcPoints(time, attempts) {
+    var points = Math.floor(100 - (time/TIME_LIMIT) * (attempts/MAX_ATTEMPTS) * 100); //formula for calculating points
+    let displayPoints = document.getElementById("score");
+    displayPoints.innerText = points;
 }
