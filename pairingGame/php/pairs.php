@@ -139,13 +139,22 @@
                     </div>
                 </div>
             </div>
+            <?php
+            if (isset($_POST["submit"])) {
+                $txt = $_POST["score"];
+                echo "<script>alert('$txt')</script>";
+
+                //write username and score to csv file
+                //redirect to leaderboard page
+            }
+            ?>
             <div id="aftergame" style="display:none">
-                <form action="leaderboard.php" method="POST">
-                    <p>You won with a score of: </p>
-                    <textarea disabled id="score" name="score"></textarea>
-                    <hr>
-                    <button type="button" onclick="restartGame()">Play again</button>
-                    <button type="submit">Submit score</button>
+                <p>You won with a score of: </p>
+                <textarea disabled id="score" name="score" form="aftergameform"></textarea>
+                <hr>
+                <button type="button" onclick="restartGame()">Play again</button>
+                <form id="aftergameform" method="POST">
+                    <input type="submit" name="submit" value="Submit scores"/>
                 </form>
             </div>
         </div>

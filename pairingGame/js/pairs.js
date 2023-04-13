@@ -86,13 +86,9 @@ function setStartTime() {
 function calcPoints(time, attempts) {
     points = Math.floor(100 - (time/TIME_LIMIT) * (attempts/MAX_ATTEMPTS) * 100); //formula for calculating points
     let displayPoints = document.getElementById("score");
-    displayPoints.innerText = points;
+    displayPoints.value = points;
 }
 
 function restartGame() {
     location.reload();
-}
-
-function submitScore() {
-    //write points to file
 }
