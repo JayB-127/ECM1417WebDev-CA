@@ -140,12 +140,12 @@
                 </div>
             </div>
             <div id="aftergame" style="display:none">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                <form action="leaderboard.php" method="POST">
                     <p>You won with a score of: </p>
                     <textarea disabled id="score" name="score"></textarea>
                     <hr>
                     <button type="button" onclick="restartGame()">Play again</button>
-                    <button type="button" onclick="submitScore()">Submit</button>
+                    <button type="submit">Submit score</button>
                 </form>
             </div>
         </div>
