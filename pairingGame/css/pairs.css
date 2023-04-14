@@ -56,7 +56,7 @@ html, body {
     resize: none;
 }
 
-#aftergame button {
+#aftergame button, #submit {
     width: 200px;
     height: 50px;
     margin: 20px;

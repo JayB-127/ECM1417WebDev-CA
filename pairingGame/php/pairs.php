@@ -158,7 +158,7 @@
                 <hr>
                 <button type="button" onclick="restartGame()">Play again</button>
                 <form id="aftergameform" method="POST">
-                    <input type="submit" name="submit" value="Submit scores">
+                    <input type="submit" id="submit" name="submit" value="Submit scores">
                 </form>
             </div>
         </div>
