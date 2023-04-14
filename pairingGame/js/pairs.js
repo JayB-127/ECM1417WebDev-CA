@@ -32,7 +32,7 @@ function flip(elem) {
                 }
             }
             totalFlipped += 2;
-            if (totalFlipped == 10) { //TODO: change back to 10 after testing
+            if (totalFlipped == 10) {
                 let date = new Date();
                 var timeTaken = (date.getTime() - startTime);
                 calcPoints(timeTaken, attempts);
@@ -67,7 +67,7 @@ function compareAvatars(flippedCards) {
     //for the last two cards that were flipped
     for (var i = 0; i < flippedCards.length; i++) {
         let card = document.getElementById(flippedCards[i])
-        skin.push(card.children[1].children[0].children[0].src.split("/").pop()); //takes string after last "/" in src
+        skin.push(card.children[1].children[0].children[0].src.split("/").pop()); //takes string after last "/" in src filename
         eyes.push(card.children[1].children[0].children[1].src.split("/").pop());
         mouth.push(card.children[1].children[0].children[2].src.split("/").pop());
     }
