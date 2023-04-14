@@ -144,8 +144,10 @@
                 $username = $_COOKIE["username"];
                 $score = $_POST["score"];
                 $msg = $username . ", " . $score . "\n";
-                $filename = "../data/leaderboard.csv";
-                file_put_contents($filename, $msg);
+                $path = realpath(dirname(__FILE__) . "/..") . "/data/leaderboard.csv";
+                $file = fopen($path, "w");
+                fwrite($file, $msg);
+                fclose($file);
                 echo "<script>location.href='leaderboard.php';</script>";
                 exit();
             }
