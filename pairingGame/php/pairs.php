@@ -148,14 +148,14 @@
                 }
                 $score = $_POST["score"];
 
-                $msg = $username . ", " . $score;
+                $msg = $score . ", " . $username . "\n";
 
                 $content = file_get_contents("../data/leaderboard.csv");
-                $lines = explode(PHP_EOL, $content);
+                $lines = explode("\n", $content);
 
                 $containsName = false;
                 foreach ($lines as $line) {
-                    $name = explode(", ", $line)[0];
+                    $name = explode(", ", $line)[1];
                     if ($name == $username) {
                         $updatedContent = str_replace($line, $msg, $content);
                         file_put_contents("../data/leaderboard.csv", $updatedContent);
@@ -165,7 +165,7 @@
                 }
 
                 if ($containsName === false) {
-                    $updatedContent = $content . $msg . "\n";
+                    $updatedContent = $content . $msg;
                     file_put_contents("../data/leaderboard.csv", $updatedContent);
                 }
 
