@@ -1,10 +1,26 @@
 
+function setUp() { //ran when body loads
+    const cards = document.getElementsByClassName("card");
+    for (var i = 0; i < cards.length; i++) {
+        cards[i].style.pointerEvents = "none"; //disable all cards
+    }
+    let game = document.getElementById("game");
+    game.style.opacity = "75%";
+}
+
 function showGame() {
     let startgame = document.getElementById("startgame");
-    let game = document.getElementById("game");
     startgame.style.display = "none";
-    game.style.display = "inline-grid"
+
+    let game = document.getElementById("game");
+    game.style.removeProperty("opacity");
+
     createAvatars();
+
+    const cards = document.getElementsByClassName("card");
+    for (var i = 0; i < cards.length; i++) {
+        cards[i].style.removeProperty("pointer-events"); //make all cards clickable
+    }
 }
 
 function createAvatars() {

@@ -10,14 +10,14 @@
         <script type="text/javascript" src="../js/pairs.js"></script>
         <title>PAIRS</title>
     </head>
-    <body>
+    <body onload="setUp()">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <?php include("navbar.php"); ?>
         <div id="main">
             <div id="startgame">
                 <button type="button" onclick="showGame(); setStartTime()">Start Game...</button>
             </div>
-            <div id="game" style="display:none">
+            <div id="game" style="display:inline-grid;">
                 <div id="1" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
