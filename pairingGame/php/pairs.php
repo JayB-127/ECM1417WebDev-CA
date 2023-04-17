@@ -145,7 +145,26 @@
                 $score = $_POST["score"];
                 $msg = $username . ", " . $score . "\n";
                 $file = fopen("../data/leaderboard.csv", "a");
-                fwrite($file, $msg);
+
+                $lines = file_get_contents("../data/leaderboard.csv");
+                echo "<script type='text/javascript'>alert('$lines');</script>";
+                
+                /*
+                $containsUsername = false;
+                foreach($lines as $line) {
+                    echo "<script type='text/javascript'>alert('$line');</script>";
+                    if (str_contains($line, $username)) {
+                        echo "<script type='text/javascript'>alert('username already in file');</script>";
+                        //replace line with new score
+                        $containsUsername = true;
+                    }
+                }
+
+                if ($containsUsername === false) {
+                    fwrite($file, $msg);
+                }*/
+
+                
                 fclose($file);
                 echo "<script>location.href='leaderboard.php';</script>";
                 exit();
