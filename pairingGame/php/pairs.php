@@ -147,27 +147,28 @@
                     $username = $_COOKIE["username"];
                 }
                 $score = $_POST["score"];
-                $file = fopen("../data/leaderboard.csv", "a+");
 
+                $msg = $username . ", " . $score;
+
+                $content = file_get_contents("../data/leaderboard.csv");
+                $lines = explode(PHP_EOL, $content);
 
                 $containsName = false;
-                while (($line = fgets($file)) !== false) {
+                foreach ($lines as $line) {
                     $name = explode(", ", $line)[0];
                     if ($name == $username) {
+                        $updatedContent = str_replace($line, $msg, $content);
+                        file_put_contents("../data/leaderboard.csv", $updatedContent);
                         $containsName = true;
-                        $msg = "username already exists in file!, [replace with new score] \n";
-                        //TODO: replace line with new score
                         break;
                     }
                 }
 
                 if ($containsName === false) {
-                    $msg = $username . ", " . $score . "\n";
+                    $updatedContent = $content . $msg . "\n";
+                    file_put_contents("../data/leaderboard.csv", $updatedContent);
                 }
 
-                fwrite($file, $msg);
-
-                fclose($file);
                 echo "<script>location.href='leaderboard.php';</script>";
                 exit();
             }

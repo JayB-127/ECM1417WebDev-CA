@@ -20,9 +20,10 @@
                     </tr>
                     <?php
                     $file = fopen("../data/leaderboard.csv", "r");
+                    //TODO: sort file so scores are in descending order
                     while (($line = fgets($file)) !== false) {
                         $strings = explode(", ", $line);
-                        echo "<tr><td>$strings[0]</td><td>$strings[1]</td><tr>";    
+                        echo "<tr><td>$strings[0]</td><td>$strings[1]</td><tr>";
                     }
                     fclose($file);
                     ?>
