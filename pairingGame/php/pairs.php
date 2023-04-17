@@ -174,7 +174,7 @@
             }
             ?>
             <div id="aftergame" style="display:none">
-                <p>You won with a score of: </p>
+                <p>You finished with a score of: </p>
                 <input type="text" name="score" id="score" form="aftergameform">
                 <hr>
                 <button type="button" onclick="restartGame()">Play again</button>
