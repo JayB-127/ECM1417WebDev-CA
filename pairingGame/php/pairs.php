@@ -179,7 +179,21 @@
                 <hr>
                 <button type="button" onclick="restartGame()">Play again</button>
                 <form id="aftergameform" method="POST">
-                    <input type="submit" id="submit" name="submit" value="Submit scores">
+                    <?php
+                    if (isset($_SESSION["registered"])) {
+                        if ($_SESSION["registered"] === true) {
+                    ?>
+                        <input type="submit" id="submit" name="submit" value="Submit scores">
+                    <?php
+                        } else if ($_SESSION["registered"] === false) {
+                    ?>
+                        <button onclick="location.href='register.php'">Register to submit score</button>
+                    <?php
+                        }
+                    } else {
+                    ?>
+                    <button onclick="location.href='register.php'">Register to submit score</button>
+                    <?php } ?>
                 </form>
             </div>
         </div>
