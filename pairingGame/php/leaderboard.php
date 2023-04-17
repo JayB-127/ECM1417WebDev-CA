@@ -18,14 +18,14 @@
                         <th>Username</th>
                         <th>Highscore</th>
                     </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>score</td>
-                    </tr>
-                    <tr>
-                        <td>name2</td>
-                        <td>score2</td>
-                    </tr>
+                    <?php
+                    $file = fopen("../data/leaderboard.csv", "r");
+                    while (($line = fgets($file)) !== false) {
+                        $strings = explode(", ", $line);
+                        echo "<tr><td>$strings[0]</td><td>$strings[1]</td><tr>";    
+                    }
+                    fclose($file);
+                    ?>
                 </table>
             </div>
         </div>
