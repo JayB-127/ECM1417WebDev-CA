@@ -33,6 +33,14 @@ html, body {
 
 }
 
+#form input[type=submit] {
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin-left: calc(50% - 100px);
+    margin-bottom: 10px;
+}
+
 #invalidMsg {
     color: red;
     font-size: 13px;

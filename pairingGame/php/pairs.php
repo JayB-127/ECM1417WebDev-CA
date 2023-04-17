@@ -141,7 +141,11 @@
             </div>
             <?php
             if (isset($_POST["submit"])) {
-                $username = $_COOKIE["username"];
+                if (empty($_COOKIE["username"])) {
+                    $username = "Guest";
+                } else {
+                    $username = $_COOKIE["username"];
+                }
                 $score = $_POST["score"];
                 $file = fopen("../data/leaderboard.csv", "a+");
 
