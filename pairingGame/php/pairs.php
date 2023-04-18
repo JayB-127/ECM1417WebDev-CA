@@ -147,7 +147,6 @@
                     $username = $_COOKIE["username"];
                 }
                 $score = $_POST["score"];
-
                 $msg = $score . ", " . $username . "\n";
 
                 $content = file_get_contents("../data/leaderboard.csv");
