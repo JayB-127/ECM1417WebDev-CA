@@ -21,13 +21,11 @@
                     <?php
                     $file = fopen("../data/leaderboard.csv", "r");
 
-                    /*
                     $content = file_get_contents("../data/leaderboard.csv");
-                    $lines = explode(";", $content);
+                    $lines = explode("\n", $content);
                     arsort($lines);
-                    $updatedContent = implode($lines);
+                    $updatedContent = implode("\n", $lines);
                     file_put_contents("../data/leaderboard.csv", $updatedContent);
-                    */
 
                     while (($line = fgets($file)) !== false) {
                         $strings = explode(", ", $line);
