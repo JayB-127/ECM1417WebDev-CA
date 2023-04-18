@@ -157,6 +157,7 @@
                 foreach ($lines as $line) {
                     $name = explode(", ", $line)[1];
                     if ($name == $username) {
+                        $msg = $score . ", " . $username;
                         $updatedContent = str_replace($line, $msg, $content);
                         file_put_contents("../data/leaderboard.csv", $updatedContent);
                         $containsName = true;
