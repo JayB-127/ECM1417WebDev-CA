@@ -141,7 +141,7 @@
             </div>
             <div id="utils">
                 <div id="timer">
-                    <p id="timerCount">Time left: 60</p>
+                    <p id="timerCount">Time left: 30</p>
                 </div>
                 <div id="attempts">
                     <p id="attemptCount">Attempts left: 30</p>
@@ -182,7 +182,7 @@
             }
             ?>
             <div id="aftergame" style="display:none">
-                <p id="statement">You finished with a score of: </p>
+                <p id="statement">You won with a score of: </p>
                 <input type="text" readonly name="score" id="score" form="aftergameform">
                 <hr>
                 <button type="button" onclick="restartGame()">Play again</button>

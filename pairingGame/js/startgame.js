@@ -21,6 +21,8 @@ function showGame() {
     for (var i = 0; i < cards.length; i++) {
         cards[i].style.removeProperty("pointer-events"); //make all cards clickable
     }
+
+    startTimer();
 }
 
 function createAvatars() {
@@ -60,4 +62,30 @@ function assignFeatures(cardId, features) {
     card.children[1].children[0].children[0].src = "../assets/skin/".concat(skin, ".png");
     card.children[1].children[0].children[1].src = "../assets/eyes/".concat(eyes, ".png");
     card.children[1].children[0].children[2].src = "../assets/mouth/".concat(mouth, ".png");
+}
+
+function startTimer() {
+    var game = document.getElementById("game");
+    var timerCount = document.getElementById("timerCount");
+    var count = TIME_LIMIT / 1000;
+    var interval = setInterval(function() {
+        if (game.style.display !== "none") {
+            count -= 1;
+            if (count == 0) {
+                clearInterval(interval);
+                let aftergame = document.getElementById("aftergame");
+                let game = document.getElementById("game");
+                let utils = document.getElementById("utils");
+                aftergame.style.display = "inline-block";
+                game.style.display = "none";
+                utils.style.display = "none";
+    
+                document.getElementById("score").value = 0;
+                document.getElementById("statement").innerHTML = "Time limit (30 secs) reached! Score:";
+            }
+            timerCount.innerHTML = "Time left: " + count;
+        } else {
+            clearInterval(interval);
+        }
+    }, 1000);
 }
