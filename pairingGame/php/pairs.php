@@ -139,6 +139,14 @@
                     </div>
                 </div>
             </div>
+            <div id="utils">
+                <div id="timer">
+                    <p id="timerCount">Time left: 60</p>
+                </div>
+                <div id="attempts">
+                    <p id="attemptCount">Attempts left: 30</p>
+                </div>
+            </div>
             <?php
             if (isset($_POST["submit"])) {
                 if (empty($_COOKIE["username"])) {

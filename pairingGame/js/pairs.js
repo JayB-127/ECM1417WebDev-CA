@@ -39,8 +39,10 @@ function flip(elem) {
                 setTimeout(function() {
                     let aftergame = document.getElementById("aftergame");
                     let game = document.getElementById("game");
+                    let utils = document.getElementById("utils");
                     aftergame.style.display = "inline-block";
                     game.style.display = "none";
+                    utils.style.display = "none";
                 }, 500);
             }
         } else {
@@ -57,12 +59,16 @@ function flip(elem) {
         flipped = 0;
         flippedCards = [];
 
+        document.getElementById("attemptCount").innerHTML = "Attempts left: " + (30 - attempts);
+
         if (attempts === MAX_ATTEMPTS) {
             setTimeout(function() {
                 let aftergame = document.getElementById("aftergame");
                 let game = document.getElementById("game");
+                let utils = document.getElementById("utils");
                 aftergame.style.display = "inline-block";
                 game.style.display = "none";
+                utils.style.display = "none";
 
                 document.getElementById("score").value = 0;
                 document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
