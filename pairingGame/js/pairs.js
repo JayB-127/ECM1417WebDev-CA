@@ -56,6 +56,18 @@ function flip(elem) {
         attempts += 1;
         flipped = 0;
         flippedCards = [];
+
+        if (attempts === MAX_ATTEMPTS) {
+            setTimeout(function() {
+                let aftergame = document.getElementById("aftergame");
+                let game = document.getElementById("game");
+                aftergame.style.display = "inline-block";
+                game.style.display = "none";
+
+                document.getElementById("score").value = 0;
+                document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
+            }, 500);
+        }
     }
 }
 
@@ -85,8 +97,7 @@ function setStartTime() {
 
 function calcPoints(time, attempts) {
     points = Math.floor(100 - (time/TIME_LIMIT) * (attempts/MAX_ATTEMPTS) * 100); //formula for calculating points
-    let displayPoints = document.getElementById("score");
-    displayPoints.value = points;
+    document.getElementById("score").value = points;
 }
 
 function restartGame() {

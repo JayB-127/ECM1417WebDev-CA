@@ -174,7 +174,7 @@
             }
             ?>
             <div id="aftergame" style="display:none">
-                <p>You finished with a score of: </p>
+                <p id="statement">You finished with a score of: </p>
                 <input type="text" readonly name="score" id="score" form="aftergameform">
                 <hr>
                 <button type="button" onclick="restartGame()">Play again</button>
@@ -183,7 +183,7 @@
                     if (isset($_SESSION["registered"])) {
                         if ($_SESSION["registered"] === true) {
                     ?>
-                        <input type="submit" id="submit" name="submit" value="Submit scores">
+                        <input type="submit" id="submit" name="submit" value="Submit scores"> 
                     <?php
                         } else if ($_SESSION["registered"] === false) {
                     ?>
