@@ -195,12 +195,12 @@
                     <?php
                         } else if ($_SESSION["registered"] === false) {
                     ?>
-                        <button onclick="location.href='register.php'">Register to submit score</button>
+                        <button type="button" onclick="location.href='registration.php';">Register to submit score</button>
                     <?php
                         }
                     } else {
                     ?>
-                    <button onclick="location.href='register.php'">Register to submit score</button>
+                    <button type="button" onclick="location.href='registration.php';">Register to submit score</button>
                     <?php } ?>
                 </form>
             </div>
