@@ -46,8 +46,20 @@ html, body {
     font-size: 35px;
 }
 
+#aftergame label {
+    font-size: 25px;
+}
+
 #aftergame input[type=text] {
     pointer-events: none;
+    resize: none;
+    color: red;
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding-left: 10px;
+    width: 50px;
+    font-size: 25px;
 }
 
 #aftergame #score {

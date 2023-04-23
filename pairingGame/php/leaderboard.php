@@ -16,7 +16,10 @@
                 <table>
                     <tr>
                         <th>Username</th>
-                        <th>Highscore</th>
+                        <th>Round 1</th>
+                        <th>Round 2</th>
+                        <th>Round 3</th>
+                        <th>Total Score</th>
                     </tr>
                     <?php
                     $file = fopen("../data/leaderboard.csv", "r");
@@ -29,7 +32,7 @@
 
                     while (($line = fgets($file)) !== false) {
                         $strings = explode(", ", $line);
-                        echo "<tr><td>$strings[1]</td><td>$strings[0]</td><tr>";
+                        echo "<tr><td>$strings[4]</td><td>$strings[1]</td><td>$strings[2]</td><td>$strings[3]</td><td>$strings[0]</td><tr>";
                     }
                     fclose($file);
                     ?>

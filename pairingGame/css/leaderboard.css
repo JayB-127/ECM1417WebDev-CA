@@ -13,7 +13,7 @@ html, body {
 
 #leaderboard {
     display: inline-block;
-    margin: 200px calc(50% - 250px);
+    margin: 200px calc(50% - 500px);
     background-color: grey;
     box-shadow: 5px 5px white;
 }
@@ -28,7 +28,7 @@ html, body {
     background-color: blue;
     color: white;
     border: 3px solid black;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 #leaderboard td {

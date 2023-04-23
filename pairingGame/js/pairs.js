@@ -157,9 +157,11 @@ function round3Flip(elem) {
                 let date = new Date();
                 var timeTaken = (date.getTime() - startTime);
                 round3Score = currentScore + Math.floor((TIME_LIMIT - timeTaken) / 1000);
-                alert(round3Score);
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
+                document.getElementById("round1score").value = round1Score;
+                document.getElementById("round2score").value = round2Score;
+                document.getElementById("round3score").value = round3Score;
                 setTimeout(function() {
                     let aftergame = document.getElementById("aftergame");
                     let game = document.getElementById(round);
