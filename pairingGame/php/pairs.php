@@ -14,11 +14,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <?php include("navbar.php"); ?>
         <div id="main">
-            <div id="startgame">
+        <div id="startgame">
                 <button type="button" onclick="showGame(); setStartTime()">Start Game...</button>
             </div>
-            <div id="game" style="display:inline-grid;">
-                <div id="1" class="card" onclick="flip(this)">
+            <div id="round1" style="display:inline-grid;">
+                <div id="1.1" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -30,7 +30,81 @@
                         </div>
                     </div>
                 </div>
-                <div id="2" class="card" onclick="flip(this)">
+                <div id="1.2" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="1.3" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="1.4" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="1.5" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="1.6" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="round2" style="display:none;">
+                <div id="2.1" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="2.2" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -42,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="3" class="card" onclick="flip(this)">
+                <div id="2.3" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -54,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="4" class="card" onclick="flip(this)">
+                <div id="2.4" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -66,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="5" class="card" onclick="flip(this)">
+                <div id="2.5" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -78,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="6" class="card" onclick="flip(this)">
+                <div id="2.6" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -90,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="7" class="card" onclick="flip(this)">
+                <div id="2.7" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -102,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="8" class="card" onclick="flip(this)">
+                <div id="2.8" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -114,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="9" class="card" onclick="flip(this)">
+                <div id="2.9" class="card" onclick="flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>
@@ -126,7 +200,153 @@
                         </div>
                     </div>
                 </div>
-                <div id="10" class="card" onclick="flip(this)">
+                <div id="2.10" class="card" onclick="flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="round3" style="display:none;">
+                <div id="3.1" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>x
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="skin primaryImg" src="">
+                            <img class="eyes secondaryImg" src="">
+                            <img class="mouth secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.2" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.3" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.4" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.5" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.6" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.7" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.8" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.9" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.10" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.11" class="card" onclick="round3Flip(this)">
+                    <div class="cardFront">
+                        <img class="questionMark" src="../assets/card/questionMark.png">
+                    </div>
+                    <div class="cardBack">
+                        <div class="avatar">
+                            <img class="primaryImg" src="">
+                            <img class="secondaryImg" src="">
+                            <img class="secondaryImg" src="">
+                        </div>
+                    </div>
+                </div>
+                <div id="3.12" class="card" onclick="round3Flip(this)">
                     <div class="cardFront">
                         <img class="questionMark" src="../assets/card/questionMark.png">
                     </div>

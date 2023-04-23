@@ -72,13 +72,26 @@ html, body {
     background-color: white;
 }
 
-#game {
-    grid-template-columns: auto auto auto auto auto;
+#round1, #round2, #round3 {
     background-color: grey;
     box-shadow: 5px 5px white;
     margin-top: 50px;
     padding: 20px;
+}
+
+#round1 {
+    grid-template-columns: auto auto auto;
+    margin-left: calc(50% - 380px);
+}
+
+#round2 {
+    grid-template-columns: auto auto auto auto auto;
     margin-left: calc(50% - 620px);
+}
+
+#round3 {
+    grid-template-columns: auto auto auto auto auto auto;
+    margin-left: calc(50% - 760px)
 }
 
 .card {
