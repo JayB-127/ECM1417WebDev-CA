@@ -108,7 +108,8 @@ function startTimer() {
                 utils.style.display = "none";
                 game.style.display = "none";
     
-                document.getElementById("score").value = 0;
+                totalScore = round1Score + round2Score + round3Score;
+                document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Time limit (30 secs) reached! Score:";
             }
             timerCount.innerHTML = "Time left: " + count;

@@ -47,7 +47,7 @@ function flip(elem) {
                 var timeTaken = (date.getTime() - startTime);
                 if (round === "round1") {
                     round1Score = currentScore + Math.floor((TIME_LIMIT - timeTaken) / 1000);
-                    alert(round1Score);
+                    document.getElementById("round1score").value = round1Score;
                     setTimeout(function() {
                         let game = document.getElementById("round1");
                         game.style.display = "none";
@@ -68,7 +68,7 @@ function flip(elem) {
                     }, 500);
                 } else if (round === "round2") {
                     round2Score = currentScore + Math.floor((TIME_LIMIT - timeTaken) / 1000);
-                    alert(round2Score);
+                    document.getElementById("round2score").value = round2Score;
                     setTimeout(function() {
                         let game = document.getElementById("round2");
                         game.style.display = "none";
@@ -116,7 +116,8 @@ function flip(elem) {
                 game.style.display = "none";
                 utils.style.display = "none";
 
-                document.getElementById("score").value = 0;
+                totalScore = round1Score + round2Score + round3Score;
+                document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
             }, 500);
         }
@@ -159,8 +160,6 @@ function round3Flip(elem) {
                 round3Score = currentScore + Math.floor((TIME_LIMIT - timeTaken) / 1000);
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
-                document.getElementById("round1score").value = round1Score;
-                document.getElementById("round2score").value = round2Score;
                 document.getElementById("round3score").value = round3Score;
                 setTimeout(function() {
                     let aftergame = document.getElementById("aftergame");
@@ -198,7 +197,8 @@ function round3Flip(elem) {
                 game.style.display = "none";
                 utils.style.display = "none";
 
-                document.getElementById("score").value = 0;
+                totalScore = round1Score + round2Score + round3Score;
+                document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
             }, 500);
         }

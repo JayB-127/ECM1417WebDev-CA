@@ -374,10 +374,10 @@
                 } else {
                     $username = $_COOKIE["username"];
                 }
-                $score = $_POST["score"];
                 $round1 = $_POST["round1score"];
                 $round2 = $_POST["round2score"];
                 $round3 = $_POST["round3score"];
+                $score = $_POST["score"];
                 $msg = $score . ", " . $round1 . ", " . $round2 . ", " . $round3 . ", " . $username . "\n";
 
                 $content = file_get_contents("../data/leaderboard.csv");
@@ -409,11 +409,11 @@
                 <input type="text" readonly name="score" id="score" form="aftergameform">
                 <hr>
                 <label for="round1score">Round 1 score: </label>
-                <input type="text" readonly name="round1score" id="round1score" form="aftergameform"><br>
+                <input type="text" readonly name="round1score" id="round1score" form="aftergameform" value="0"><br>
                 <label for="round2score">Round 2 score: </label>
-                <input type="text" readonly name="round2score" id="round2score" form="aftergameform"><br>
+                <input type="text" readonly name="round2score" id="round2score" form="aftergameform" value="0"><br>
                 <label for="round3score">Round 3 score: </label>
-                <input type="text" readonly name="round3score" id="round3score" form="aftergameform">
+                <input type="text" readonly name="round3score" id="round3score" form="aftergameform" value="0">
                 <hr>
                 <button type="button" onclick="restartGame()">Play again</button>
                 <form id="aftergameform" method="POST">
