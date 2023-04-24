@@ -14,19 +14,22 @@
         <?php include("navbar.php"); ?>
         <div id="main">
             <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") { //when registration is submitted
                 $invalidMsg = "";
+
+                //validate username input, displaying appropriate message if not valid
                 if (empty($_POST["username"])) {
                     $invalidMsg = "*username cannot be empty";
                 } else if (preg_match("/[\"!@#%&^*()+=\]\}\{\['<>?\/]/", $_POST["username"]) == true) {
                     $invalidMsg = "*username cannot contain: \"!@#%&^*()+={}-;:]['<>?/";
                 } else {
+                    //set cookies for username and avatar components
                     setcookie("username", $_POST["username"]);
                     setcookie("skin", $_POST["avatar-skin"]);
                     setcookie("eyes", $_POST["avatar-eyes"]);
                     setcookie("mouth", $_POST["avatar-mouth"]);
                     $_SESSION["registered"] = true;
-                    echo "<script>location.href='index.php';</script>";
+                    echo "<script>location.href='index.php';</script>"; //redirect to home page
                     exit();
                 }
             }

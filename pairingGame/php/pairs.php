@@ -16,6 +16,7 @@
         <?php
             $file = fopen("../data/leaderboard.csv", "r");
 
+            //take the first line of file contents and assign global variables to the current best scores for each round
             $content = file_get_contents("../data/leaderboard.csv");
             $lines = explode("\n", $content);
             $bestScores = explode(", ", $lines[0]);
@@ -23,6 +24,7 @@
             $bestRound2Score = $bestScores[2];
             $bestRound3Score = $bestScores[3];
 
+            //set cookies of each current best score for each round
             setcookie("bestRound1Score", $bestRound1Score);
             setcookie("bestRound2Score", $bestRound2Score);
             setcookie("bestRound3Score", $bestRound3Score);
@@ -398,10 +400,12 @@
                 <form id="aftergameform" method="POST" action="leaderboard.php">
                     <?php
                     if (isset($_SESSION["registered"])) {
+                        //if user is registered, display button to submit scores to leaderboard.csv
                         if ($_SESSION["registered"] === true) {
                     ?>
                         <input type="submit" id="submit" name="submit" value="Submit scores"> 
                     <?php
+                        //if user is not registered, display button to register
                         } else if ($_SESSION["registered"] === false) {
                     ?>
                         <button type="button" onclick="location.href='registration.php';">Register to submit score</button>

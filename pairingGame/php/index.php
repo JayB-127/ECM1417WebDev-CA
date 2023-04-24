@@ -13,6 +13,7 @@
         <?php include("navbar.php"); ?>
         <div id="main">
             <?php
+            //if user is registered, display welcome message and link to pairs.php
             if (isset($_SESSION["registered"])) {
                 if ($_SESSION["registered"] === true) {
             ?>
@@ -23,6 +24,7 @@
                     <button type="button" onclick="location.href = 'pairs.php'">Click here to play</button>
                 </div>
             <?php
+                //if user is not registered, display register message and link to registration.php
                 } else if ($_SESSION["registered"] === false) {
             ?>
                 <div id="notRegistered">

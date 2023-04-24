@@ -1,3 +1,4 @@
+
 var flipped = 0;
 var totalFlipped = 0;
 var flippedCards = [];
@@ -22,25 +23,29 @@ var bestRound3Score;
 
 var currentScore = 0;
 
+//called on every card click for round 1 and round 2
 function flip(elem) {
+    //first flip
     if (flipped == 0) {
-        flippedCards.push(elem.id);
-        elem.style.transform = "rotateY(-180deg)";
-        elem.style.pointerEvents = "none";
+        flippedCards.push(elem.id); //add to array of flipped cards
+        elem.style.transform = "rotateY(-180deg)"; //rotate card
+        elem.style.pointerEvents = "none"; //disable card
         flipped += 1;
+    //second flip
     } else if (flipped == 1) {
-        flippedCards.push(elem.id);
+        flippedCards.push(elem.id); //add to array of flipped cards
         const cards = document.getElementsByClassName("card");
         for (var i = 0; i < cards.length; i++) {
-            cards[i].style.pointerEvents = "none";
+            cards[i].style.pointerEvents = "none"; //disable all cards
         }
-        elem.style.transform = "rotateY(-180deg)";
+        elem.style.transform = "rotateY(-180deg)"; //rotate card
 
         //compare avatar features of both cards
         var comparison = compareAvatars(flippedCards);
-        if (comparison == true) {
-            currentScore += 5;
+        if (comparison == true) { //cards match
+            currentScore += 5; //correct guess increases score
 
+            //set background color of game to gold if new best score for the round is obtained
             if (round === "round1") {
                 if (currentScore > bestRound1Score) {
                     document.getElementById("round1").style.backgroundColor = "#FFD700";
@@ -53,49 +58,52 @@ function flip(elem) {
 
             for (var i = 0; i < cards.length; i++) {
                 if (cards[i].style.transform !== "rotateY(-180deg)") {
-                    cards[i].style.removeProperty("pointer-events");
+                    cards[i].style.removeProperty("pointer-events"); //enable all cards that are not already flipped over (those not correctly guessed)
                 }
             }
             totalFlipped += 2;
+            //if all cards are flipped (guessed correctly)
             if (totalFlipped == flippedForRound) {
                 if (round === "round1") {
-                    round1Score = currentScore;
-                    document.getElementById("round1score").value = round1Score;
+                    round1Score = currentScore; //set current score as final score
+                    document.getElementById("round1score").value = round1Score; //display score
                     setTimeout(function() {
+                        //hide and show appropriate divs
                         let game = document.getElementById("round1");
                         game.style.display = "none";
                         let round2 = document.getElementById("round2");
                         round2.style.display = "inline-grid";
+
                         const cards = round2.getElementsByClassName("card");
                         for (var i = 0; i < cards.length; i++) {
-                            cards[i].style.removeProperty("pointer-events"); //make all cards in round2 clickable
+                            cards[i].style.removeProperty("pointer-events"); //make all cards in round 2 clickable
                         }
                         attempts = 0;
+                        //reset attempts and timer count
                         document.getElementById("attemptCount").innerHTML = "Attempts left: " + (30 - attempts);
                         document.getElementById("timerCount").innerHTML = "Time left: 30";
-                        round = "round2";
-                        setStartTime();
+                        round = "round2"; //declare new round
                         startTimer();
                         flippedForRound = 10;
                         currentScore = 0;
                     }, 500);
                 } else if (round === "round2") {
-                    round2Score = currentScore;
-                    document.getElementById("round2score").value = round2Score;
+                    round2Score = currentScore; //set current score as final score
+                    document.getElementById("round2score").value = round2Score; //display score
                     setTimeout(function() {
+                        //hide and show appropriate divs
                         let game = document.getElementById("round2");
                         game.style.display = "none";
                         let round3 = document.getElementById("round3");
                         round3.style.display = "inline-grid";
                         const cards = round3.getElementsByClassName("card");
                         for (var i = 0; i < cards.length; i++) {
-                            cards[i].style.removeProperty("pointer-events"); //make all cards in round2 clickable
+                            cards[i].style.removeProperty("pointer-events"); //make all cards in round 3 clickable
                         }
                         attempts = 0;
                         document.getElementById("attemptCount").innerHTML = "Attempts left: " + (30 - attempts);
                         document.getElementById("timerCount").innerHTML = "Time left: 30";
-                        round = "round3";
-                        setStartTime();
+                        round = "round3"; //declare new round
                         startTimer();
                         flippedForRound = 12;
                         currentScore = 0;
@@ -103,8 +111,8 @@ function flip(elem) {
                     currentScore = 0;
                 }
             }
-        } else {
-            currentScore -= 1;
+        } else { //cards did not match
+            currentScore -= 1; //incorrect guess decrements score
             setTimeout(function() {
                 for (var i = 0; i < cards.length; i++) {
                     cards[i].style.removeProperty("transform"); //flip over all cards to front
@@ -118,10 +126,12 @@ function flip(elem) {
         flipped = 0;
         flippedCards = [];
 
-        document.getElementById("attemptCount").innerHTML = "Attempts left: " + (30 - attempts);
+        document.getElementById("attemptCount").innerHTML = "Attempts left: " + (30 - attempts); //display new attempts count
 
+        //if max attempts reached
         if (attempts === MAX_ATTEMPTS) {
             setTimeout(function() {
+                //end of game divs shown
                 let aftergame = document.getElementById("aftergame");
                 let game = document.getElementById(round);
                 let utils = document.getElementById("utils");
@@ -129,6 +139,7 @@ function flip(elem) {
                 game.style.display = "none";
                 utils.style.display = "none";
 
+                //calculate score and display
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
@@ -137,17 +148,21 @@ function flip(elem) {
     }
 }
 
+//called on every card click in round 3
 function round3Flip(elem) {
+    //first flip
     if (flipped == 0) {
         flippedCards.push(elem.id);
         elem.style.transform = "rotateY(-180deg)";
         elem.style.pointerEvents = "none";
         flipped += 1;
+    //second flip
     } else if (flipped == 1) {
         flippedCards.push(elem.id);
         elem.style.transform = "rotateY(-180deg)";
         elem.style.pointerEvents = "none";
         flipped += 1;
+    //third flip
     } else if (flipped == 2) {
         flippedCards.push(elem.id);
         const cards = document.getElementsByClassName("card");
@@ -159,25 +174,28 @@ function round3Flip(elem) {
         //compare avatar features of both cards
         var comparison = compareAvatars(flippedCards);
 
-        if (comparison == true) {
-            currentScore += 5;
+        if (comparison == true) { //cards match
+            currentScore += 5; //correct guess increases score
 
+            //set background color of game to gold if new best score for the round is obtained
             if (currentScore > bestRound3Score) {
                 document.getElementById("round3").style.backgroundColor = "#FFD700";
             }
 
             for (var i = 0; i < cards.length; i++) {
                 if (cards[i].style.transform !== "rotateY(-180deg)") {
-                    cards[i].style.removeProperty("pointer-events");
+                    cards[i].style.removeProperty("pointer-events"); //enable all cards that are not already flipped over (those not correctly guessed)
                 }
             }
             totalFlipped += 3;
+            //if all cards are flipped (guessed correctly)
             if (totalFlipped == flippedForRound) {
-                round3Score = currentScore;
-                totalScore = round1Score + round2Score + round3Score;
+                round3Score = currentScore; //set current score as final
+                totalScore = round1Score + round2Score + round3Score; //calculate total score and display
                 document.getElementById("score").value = totalScore;
                 document.getElementById("round3score").value = round3Score;
                 setTimeout(function() {
+                    //show end of game
                     let aftergame = document.getElementById("aftergame");
                     let game = document.getElementById(round);
                     let utils = document.getElementById("utils");
@@ -187,8 +205,8 @@ function round3Flip(elem) {
                 }, 500);
                 currentScore = 0;
             }
-        } else {
-            currentScore -= 1;
+        } else { //cards do not match
+            currentScore -= 1; //incorrect guess decrements score
             setTimeout(function() {
                 for (var i = 0; i < cards.length; i++) {
                     cards[i].style.removeProperty("transform"); //flip over all cards to front
@@ -202,10 +220,12 @@ function round3Flip(elem) {
         flipped = 0;
         flippedCards = [];
 
-        document.getElementById("attemptCount").innerHTML = "Attempts left: " + (30 - attempts);
+        document.getElementById("attemptCount").innerHTML = "Attempts left: " + (30 - attempts); //display new attempts count
 
+        //if max attempts reached
         if (attempts === MAX_ATTEMPTS) {
             setTimeout(function() {
+                //show end of game divs
                 let aftergame = document.getElementById("aftergame");
                 let game = document.getElementById(round);
                 let utils = document.getElementById("utils");
@@ -213,6 +233,7 @@ function round3Flip(elem) {
                 game.style.display = "none";
                 utils.style.display = "none";
 
+                //calculate score and display
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
@@ -230,10 +251,11 @@ function compareAvatars(flippedCards) {
         //for the last two cards that were flipped
         for (var i = 0; i < flippedCards.length; i++) {
             let card = document.getElementById(flippedCards[i])
-            skin.push(card.children[1].children[0].children[0].src.split("/").pop()); //takes string after last "/" in src filename
+            skin.push(card.children[1].children[0].children[0].src.split("/").pop()); //takes string (avatar component name) after last "/" in src filename
             eyes.push(card.children[1].children[0].children[1].src.split("/").pop());
             mouth.push(card.children[1].children[0].children[2].src.split("/").pop());
         }
+        //check they are all equal
         if (skin[0] == skin[1] && eyes[0] == eyes[1] && mouth[0] == mouth[1]) {
             return true;
         }
@@ -242,10 +264,11 @@ function compareAvatars(flippedCards) {
     } else if (round === "round3") {
         for (var i = 0; i < flippedCards.length; i++) {
             let card = document.getElementById(flippedCards[i])
-            skin.push(card.children[1].children[0].children[0].src.split("/").pop()); //takes string after last "/" in src filename
+            skin.push(card.children[1].children[0].children[0].src.split("/").pop()); //takes string (avatar component name) after last "/" in src filename
             eyes.push(card.children[1].children[0].children[1].src.split("/").pop());
             mouth.push(card.children[1].children[0].children[2].src.split("/").pop());
         }
+        //check they are all equal
         if (skin[0] == skin[1] && skin[1] == skin[2] && eyes[0] == eyes[1] && eyes[1] == eyes[2] && mouth[0] == mouth[1] && mouth[1] == mouth[2]) {
             return true;
         }
@@ -253,11 +276,6 @@ function compareAvatars(flippedCards) {
     }
 }
 
-function setStartTime() {
-    let date = new Date();
-    startTime = date.getTime();   
-}
-
 function restartGame() {
-    location.reload();
+    location.reload(); //reloads the page
 }

@@ -19,6 +19,7 @@
                         <a class="nav-link" href="pairs.php">Play Pairs</a>
                     </li>
                     <?php
+                    //if user is registered, display link to leaderboard
                     if (isset($_SESSION["registered"])) {
                         if ($_SESSION["registered"] === true) {
                     ?>
@@ -31,6 +32,7 @@
                             <img class="secondaryImg" src="<?php echo $_COOKIE["mouth"] ?>">
                         </li>
                     <?php
+                        //if user is not registered, display link to register
                         } else if ($_SESSION["registered"] === false) {
                     ?>
                         <li class="nav-item" name="register">
