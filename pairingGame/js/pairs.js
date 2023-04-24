@@ -16,6 +16,10 @@ var round2Score = 0;
 var round3Score = 0;
 var totalScore = 0;
 
+var bestRound1Score;
+var bestRound2Score;
+var bestRound3Score;
+
 var currentScore = 0;
 
 function flip(elem) {
@@ -36,6 +40,17 @@ function flip(elem) {
         var comparison = compareAvatars(flippedCards);
         if (comparison == true) {
             currentScore += 5;
+
+            if (round === "round1") {
+                if (currentScore > bestRound1Score) {
+                    document.getElementById("round1").style.backgroundColor = "#FFD700";
+                }
+            } else if (round === "round2") {
+                if (currentScore > bestRound2Score) {
+                    document.getElementById("round2").style.backgroundColor = "#FFD700";
+                }
+            }
+
             for (var i = 0; i < cards.length; i++) {
                 if (cards[i].style.transform !== "rotateY(-180deg)") {
                     cards[i].style.removeProperty("pointer-events");
@@ -43,10 +58,8 @@ function flip(elem) {
             }
             totalFlipped += 2;
             if (totalFlipped == flippedForRound) {
-                let date = new Date();
-                var timeTaken = (date.getTime() - startTime);
                 if (round === "round1") {
-                    round1Score = currentScore + Math.floor((TIME_LIMIT - timeTaken) / 1000);
+                    round1Score = currentScore;
                     document.getElementById("round1score").value = round1Score;
                     setTimeout(function() {
                         let game = document.getElementById("round1");
@@ -67,7 +80,7 @@ function flip(elem) {
                         currentScore = 0;
                     }, 500);
                 } else if (round === "round2") {
-                    round2Score = currentScore + Math.floor((TIME_LIMIT - timeTaken) / 1000);
+                    round2Score = currentScore;
                     document.getElementById("round2score").value = round2Score;
                     setTimeout(function() {
                         let game = document.getElementById("round2");
@@ -148,6 +161,11 @@ function round3Flip(elem) {
 
         if (comparison == true) {
             currentScore += 5;
+
+            if (currentScore > bestRound3Score) {
+                document.getElementById("round3").style.backgroundColor = "#FFD700";
+            }
+
             for (var i = 0; i < cards.length; i++) {
                 if (cards[i].style.transform !== "rotateY(-180deg)") {
                     cards[i].style.removeProperty("pointer-events");
@@ -155,9 +173,7 @@ function round3Flip(elem) {
             }
             totalFlipped += 3;
             if (totalFlipped == flippedForRound) {
-                let date = new Date();
-                var timeTaken = (date.getTime() - startTime);
-                round3Score = currentScore + Math.floor((TIME_LIMIT - timeTaken) / 1000);
+                round3Score = currentScore;
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
                 document.getElementById("round3score").value = round3Score;

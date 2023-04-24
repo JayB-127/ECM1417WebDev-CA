@@ -7,6 +7,12 @@ function setUp() { //ran when body loads
     for (var i = 0; i < cards.length; i++) {
         cards[i].style.pointerEvents = "none"; //disable all cards
     }
+
+    //set values for bestRoundscores by retrieving cookies
+    bestRound1Score = getScoreCookie("bestRound1Score");
+    bestRound2Score = getScoreCookie("bestRound2Score");
+    bestRound3Score = getScoreCookie("bestRound3Score");
+
 }
 
 function showGame() {
@@ -117,4 +123,18 @@ function startTimer() {
             clearInterval(interval);
         }
     }, 1000);
+}
+
+function getScoreCookie(name) {
+    var cookies = document.cookie.split(";");
+    
+    for (var i = 0; i < cookies.length; i++) {
+        var cookieName = cookies[i].split("=")[0];
+        var cookieValue = cookies[i].split("=")[1];
+        if (cookieName.trim() == name) {
+            return decodeURIComponent(cookieValue);
+        }
+    }
+
+    return 0;
 }

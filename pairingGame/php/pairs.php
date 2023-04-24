@@ -13,8 +13,24 @@
     <body onload="setUp()">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <?php include("navbar.php"); ?>
+        <?php
+            $file = fopen("../data/leaderboard.csv", "r");
+
+            $content = file_get_contents("../data/leaderboard.csv");
+            $lines = explode("\n", $content);
+            $bestScores = explode(", ", $lines[0]);
+            $bestRound1Score = $bestScores[1];
+            $bestRound2Score = $bestScores[2];
+            $bestRound3Score = $bestScores[3];
+
+            setcookie("bestRound1Score", $bestRound1Score);
+            setcookie("bestRound2Score", $bestRound2Score);
+            setcookie("bestRound3Score", $bestRound3Score);
+
+            fclose($file);
+        ?>
         <div id="main">
-        <div id="startgame">
+            <div id="startgame">
                 <button type="button" onclick="showGame(); setStartTime()">Start Game...</button>
             </div>
             <div id="round1" style="display:inline-grid;">
