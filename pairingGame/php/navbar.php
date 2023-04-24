@@ -33,7 +33,7 @@
                     <?php
                         } else if ($_SESSION["registered"] === false) {
                     ?>
-                        <li class="nav-item" name="registration">
+                        <li class="nav-item" name="register">
                             <a class="nav-link" href="registration.php" name="register">Register</a>
                         </li>
                     <?php
@@ -41,7 +41,7 @@
                     } else {
                         $_SESSION["registered"] = false;
                     ?>
-                    <li class="nav-item" name="registration">
+                    <li class="nav-item" name="register">
                         <a class="nav-link" href="registration.php" name="register">Register</a>
                     </li>
                     <?php } ?>
