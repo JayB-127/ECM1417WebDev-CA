@@ -383,43 +383,6 @@
                     <p id="attemptCount">Attempts left: 30</p>
                 </div>
             </div>
-            <?php
-            if (isset($_POST["submit"])) {
-                if (empty($_COOKIE["username"])) {
-                    $username = "Guest";
-                } else {
-                    $username = $_COOKIE["username"];
-                }
-                $round1 = $_POST["round1score"];
-                $round2 = $_POST["round2score"];
-                $round3 = $_POST["round3score"];
-                $score = $_POST["score"];
-                $msg = $score . ", " . $round1 . ", " . $round2 . ", " . $round3 . ", " . $username . "\n";
-
-                $content = file_get_contents("../data/leaderboard.csv");
-                $lines = explode("\n", $content);
-
-                $containsName = false;
-                foreach ($lines as $line) {
-                    $name = explode(", ", $line)[4];
-                    if ($name == $username) {
-                        $msg = $score . ", " . $round1 . ", " . $round2 . ", " . $round3 . ", " . $username;
-                        $updatedContent = str_replace($line, $msg, $content);
-                        file_put_contents("../data/leaderboard.csv", $updatedContent);
-                        $containsName = true;
-                        break;
-                    }
-                }
-
-                if ($containsName === false) {
-                    $updatedContent = $content . $msg;
-                    file_put_contents("../data/leaderboard.csv", $updatedContent);
-                }
-
-                echo "<script>location.href='leaderboard.php';</script>";
-                exit();
-            }
-            ?>
             <div id="aftergame" style="display:none">
                 <p id="statement">You won with a score of: </p>
                 <input type="text" readonly name="score" id="score" form="aftergameform">
@@ -432,7 +395,7 @@
                 <input type="text" readonly name="round3score" id="round3score" form="aftergameform" value="0">
                 <hr>
                 <button type="button" onclick="restartGame()">Play again</button>
-                <form id="aftergameform" method="POST">
+                <form id="aftergameform" method="POST" action="leaderboard.php">
                     <?php
                     if (isset($_SESSION["registered"])) {
                         if ($_SESSION["registered"] === true) {

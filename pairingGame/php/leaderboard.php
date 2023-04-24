@@ -12,6 +12,40 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <?php include("navbar.php"); ?>
         <div id="main">
+            <?php
+            if (isset($_POST["submit"])) {
+                if (empty($_COOKIE["username"])) {
+                            $username = "Guest";
+                } else {
+                    $username = $_COOKIE["username"];
+                }
+                $round1 = $_POST["round1score"];
+                $round2 = $_POST["round2score"];
+                $round3 = $_POST["round3score"];
+                $score = $_POST["score"];
+                $msg = $score . ", " . $round1 . ", " . $round2 . ", " . $round3 . ", " . $username . "\n";
+
+                $content = file_get_contents("../data/leaderboard.csv");
+                $lines = explode("\n", $content);
+
+                $containsName = false;
+                foreach ($lines as $line) {
+                    $name = explode(", ", $line)[4];
+                    if ($name == $username) {
+                        $msg = $score . ", " . $round1 . ", " . $round2 . ", " . $round3 . ", " . $username;
+                        $updatedContent = str_replace($line, $msg, $content);
+                        file_put_contents("../data/leaderboard.csv", $updatedContent);
+                        $containsName = true;
+                        break;
+                    }
+                }
+
+                if ($containsName === false) {
+                    $updatedContent = $content . $msg;
+                    file_put_contents("../data/leaderboard.csv", $updatedContent);
+                }
+            }
+            ?>
             <div id="leaderboard">
                 <table>
                     <tr>
