@@ -26,7 +26,7 @@
 
                     $content = file_get_contents("../data/leaderboard.csv");
                     $lines = explode("\n", $content);
-                    arsort($lines); //TODO: SORT NOT WORKING
+                    arsort($lines);
                     $updatedContent = implode("\n", $lines);
                     file_put_contents("../data/leaderboard.csv", $updatedContent);
 
