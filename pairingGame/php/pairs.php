@@ -32,8 +32,11 @@
             fclose($file);
         ?>
         <div id="main">
+            <audio loop id="music">
+                <source src="../assets/sfx/music.mp3" type="audio/mpeg">
+            </audio>
             <div id="startgame">
-                <button type="button" onclick="showGame(); setStartTime()">Start Game...</button>
+                <button type="button" onclick="showGame();">Start Game...</button>
             </div>
             <div id="round1" style="display:inline-grid;">
                 <div id="1.1" class="card" onclick="flip(this)">

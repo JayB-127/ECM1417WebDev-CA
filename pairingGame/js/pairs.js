@@ -143,6 +143,10 @@ function flip(elem) {
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
+
+                //pause music track
+                let music = document.getElementById("music");
+                music.pause();
             }, 500);
         }
     }
@@ -204,6 +208,10 @@ function round3Flip(elem) {
                     utils.style.display = "none";
                 }, 500);
                 currentScore = 0;
+
+                //pause music track
+                let music = document.getElementById("music");
+                music.pause();
             }
         } else { //cards do not match
             currentScore -= 1; //incorrect guess decrements score
@@ -237,6 +245,10 @@ function round3Flip(elem) {
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Max attempts (30) reached! Score:";
+
+                //pause music track
+                let music = document.getElementById("music");
+                music.pause();
             }, 500);
         }
     }

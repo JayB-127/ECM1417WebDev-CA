@@ -42,6 +42,9 @@ function showGame() { //when 'start game' button is clicked
     }
 
     startTimer();
+
+    let music = document.getElementById("music");
+    music.play();
 }
 
 function createAvatars(cards, pairs, round) {
@@ -129,6 +132,10 @@ function startTimer() {
                 totalScore = round1Score + round2Score + round3Score;
                 document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Time limit (30 secs) reached! Score:";
+
+                //pause music track
+                let music = document.getElementById("music");
+                music.pause();
             }
             timerCount.innerHTML = "Time left: " + count; //write new time left to display
         } else {
