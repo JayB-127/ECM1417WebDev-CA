@@ -38,6 +38,12 @@
             <audio id="flipSFX">
                 <source src="../assets/sfx/flip.mp3" type="audio/mpeg">
             </audio>
+            <audio id="win">
+                <source src="../assets/sfx/win.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="lose">
+                <source src="../assets/sfx/lose.mp3" type="audio/mpeg">
+            </audio>
             <div id="startgame">
                 <button type="button" onclick="showGame();">Start Game...</button>
             </div>

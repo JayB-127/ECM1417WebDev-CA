@@ -133,9 +133,11 @@ function startTimer() {
                 document.getElementById("score").value = totalScore;
                 document.getElementById("statement").innerHTML = "Time limit (30 secs) reached! Score:";
 
-                //pause music track
+                //pause music track and play lose sound
                 let music = document.getElementById("music");
                 music.pause();
+                let lose = document.getElementById("lose");
+                lose.play();
             }
             timerCount.innerHTML = "Time left: " + count; //write new time left to display
         } else {
