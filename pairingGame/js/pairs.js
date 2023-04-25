@@ -25,6 +25,9 @@ var currentScore = 0;
 
 //called on every card click for round 1 and round 2
 function flip(elem) {
+    let flipSFX = document.getElementById("flipSFX");
+    flipSFX.play();
+
     //first flip
     if (flipped == 0) {
         flippedCards.push(elem.id); //add to array of flipped cards
@@ -154,6 +157,9 @@ function flip(elem) {
 
 //called on every card click in round 3
 function round3Flip(elem) {
+    let flipSFX = document.getElementById("flipSFX");
+    flipSFX.play();
+
     //first flip
     if (flipped == 0) {
         flippedCards.push(elem.id);

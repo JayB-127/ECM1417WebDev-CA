@@ -35,6 +35,9 @@
             <audio loop id="music">
                 <source src="../assets/sfx/music.mp3" type="audio/mpeg">
             </audio>
+            <audio id="flipSFX">
+                <source src="../assets/sfx/flip.mp3" type="audio/mpeg">
+            </audio>
             <div id="startgame">
                 <button type="button" onclick="showGame();">Start Game...</button>
             </div>
