@@ -16,6 +16,7 @@ Full-stack development project to build a website where users can play a memory 
 
 * Complex implementation:
     * Features are selected and combined to create an emoji avatar
+    * Displays a live preview of the avatar during selection process
 * Input validation on username
 * Details are stored in cookies
 
