@@ -1,4 +1,4 @@
-# ECM141 Web Development - University of Exeter
+# ECM1417 Web Development - University of Exeter
 
 Full-stack development project to build a website where users can play a memory game.
 
