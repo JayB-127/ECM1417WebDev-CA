@@ -36,10 +36,10 @@ Full-stack development project to build a website where users can play a memory 
 * Game is won if all 3 rounds passed, and lost if time or attempt limit is reached
 * Total score and those for each round are shown after game has ended
 * Unregistered users prompted to register instead of submitting score
-* Different sound effects played when a player either wins or loses
+* Different sounds played on win/loss
 
 ### Leaderboard - leaderboard.php
 
-* Contains only one score per player (removes duplicates)
+* Contains one set of scores per player
 * Displays player's name, scores per round and total score
-* Sorts players by total score, displaying them in descending order (greatest to least)
+* Sorts players by total score, displaying them in descending order
