@@ -4,7 +4,7 @@ html, body {
 }
 
 #main {
-    background-image: url("../assets/bg/backgroundImg.jpg");
+    background-image: url("../assets/bg/arcade-unsplash.jpg");
     width: auto;
     min-height: 100%;
     background-size: cover;
