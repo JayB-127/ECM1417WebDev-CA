@@ -33,8 +33,10 @@ Full-stack development project to build a website where users can play a memory 
 * Attempt counter that displays number of moves left during game
 * Music track is played when the game starts
 * Sound effect is played when a card is flipped
+* Game is won if all 3 rounds passed, and lost if time or attempt limit is reached
 * Total score and those for each round are shown after game has ended
 * Unregistered users prompted to register instead of submitting score
+* Different sound effects played when a player either wins or loses
 
 ### Leaderboard - leaderboard.php
 
