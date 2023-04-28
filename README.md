@@ -1,6 +1,16 @@
 # ECM1417 Web Development - Pairing Game
 
-Full-stack development project to build a website where users can play a memory game.
+Full-stack project to build a website where users can play a memory game.
+
+## Links to Pages
+
+http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/index.php
+
+http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/registration.php
+
+http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/pairs.php
+
+http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/leaderboard.php
 
 ## Features
 
@@ -8,7 +18,7 @@ Full-stack development project to build a website where users can play a memory 
 
 * Uses Bootstrap for mobile and responsive layout
 
-### Landing Page - index.php
+### Home - index.php
 
 * Displays different text depending on if the user is registered
 
