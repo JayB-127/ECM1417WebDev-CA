@@ -1,4 +1,4 @@
-# ECM1417 Web Development
+# ECM1417 Web Development - Pairing Game
 
 Full-stack development project to build a website where users can play a memory game.
 
