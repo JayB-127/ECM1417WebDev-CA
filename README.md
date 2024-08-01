@@ -1,15 +1,5 @@
 # ECM1417 Web Development - Pairing Game
 
-## Links to Pages
-
-http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/index.php
-
-http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/registration.php
-
-http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/pairs.php
-
-http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:58986/pairingGame/php/leaderboard.php
-
 ## Features
 
 ### Navbar - navbar.php
